@@ -9,5 +9,4 @@ public class NinerrApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NinerrApplication.class, args);
 	}
-
 }
