@@ -1,4 +1,4 @@
-package Models;
+package ptf.si.ninerr.Models;
 
 public class Users {
     private String username;
