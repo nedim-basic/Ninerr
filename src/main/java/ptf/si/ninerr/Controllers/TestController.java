@@ -2,6 +2,8 @@ package ptf.si.ninerr.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
+
 @Controller
 public class TestController {
 
@@ -9,7 +11,7 @@ public class TestController {
 
     @GetMapping("/")
     public String start() {
-        return "Index";
+        return "Start";
     }
 
     @GetMapping("/jobs")
