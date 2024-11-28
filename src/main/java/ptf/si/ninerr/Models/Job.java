@@ -1,12 +1,19 @@
 package ptf.si.ninerr.Models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
+
+@Getter
+@Setter
 
 @Entity
 @Table(name = "jobs")
 public class Job {
 
+    // Getteri i setteri
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,52 +24,4 @@ public class Job {
     private String location;
     private LocalDate postedDate;
 
-    // Getteri i setteri
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public LocalDate getPostedDate() {
-        return postedDate;
-    }
-
-    public void setPostedDate(LocalDate postedDate) {
-        this.postedDate = postedDate;
-    }
 }
