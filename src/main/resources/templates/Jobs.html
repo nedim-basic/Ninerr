@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JObs</title>
+    <title>Jobs</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-
-<h1> Jobs </h1>
-
-<p> Here are the list of jobs available: </p>
-
-<ul>
-    <li> <a href="/jobs/1"> Job 1 </a> </li>
-    <li> <a href="/jobs/2"> Job 2 </a> </li>
-    <li> <a href="/jobs/3"> Job 3 </a> </li>
-    <li> <a href="/jobs/4"> Job 4 </a> </li>
-    <li> <a href="/jobs/5"> Job 5 </a> </li>
-</ul>
+<h1>Available Jobs</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Company</th>
+        <th>Location</th>
+        <th>Posted Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="job : ${jobs}">
+        <td th:text="${job.title}"></td>
+        <td th:text="${job.description}"></td>
+        <td th:text="${job.company}"></td>
+        <td th:text="${job.location}"></td>
+        <td th:text="${job.postedDate}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
