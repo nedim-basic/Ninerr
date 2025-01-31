@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ninerr Pocetna</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div class="container">
+
+  <form class="container" th:action="@{/login}" method="post">
+    <label for="username">Korisnicko ime:</label>
+    <input class="field" type="text" id="username" name="username" />
+    <label for="password">Lozinka:</label>
+    <input class="field" type="password" id="password" name="password" />
+    <button class="button" type="submit">Prijavi se</button>
+    <span>Nemate nalog? <a th:href="@{/register}">Registrujte se besplatno</a></span>
+    </form>
+</div>
+<div th:if="${param.error}">
+            <p style="color: red;">Invalid username or password</p>
+        </div>
+</body>
+</html>
